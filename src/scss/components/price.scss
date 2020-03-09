@@ -1,0 +1,126 @@
+@import "../base/vars";
+
+.price {
+    background: #202020;
+    padding-top: 80px;
+    padding-bottom: 80px;
+    .headerPrice {
+        text-align: center;
+        &__subTitle {
+            font-family: $FontText;
+            font-size: 18px;
+            font-weight: $weightSemiBold;
+            letter-spacing: 10px;
+            text-transform: uppercase;
+            color: #F2C94C;
+            margin-bottom: 17px;
+        }
+        &__title {
+            Font-Family: $FontTitles;
+            font-weight: $weightExtraBold;
+            Font-size: 42px;
+            Vertical-Align: Top;
+            color: $fontColorMain;
+        }
+    }
+    .priceMain {
+        max-width: 1300px;
+        margin: 50px auto 0 auto;
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        &__column {
+            max-width: 420px;
+            width: 100%;
+        }
+        &__header {
+            text-align: center;
+            border: 1px solid rgba(255,255,255, .2);
+            padding-top: 20px;
+            padding-bottom: 20px;
+        }
+        &__subtitle {
+            font-family: $FontText;
+            font-size: 15px;
+            line-height: 140%;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            color: #FFFFFF;
+            opacity: 0.2;
+        }
+        &__title {
+            font-family: 'Playfair Display', serif;
+            font-style: italic;
+            font-weight: bold;
+            font-size: 34px;
+            letter-spacing: -0.5px;
+            color: #F2C94C;
+        }
+        &__list {
+            border-right: 1px solid rgba(255,255,255, .2);
+            border-left: 1px solid rgba(255,255,255, .2);
+            padding: 40px;
+        }
+        &__listItem {
+            font-family: $FontText;
+            font-size: 18px;
+            line-height: 140%;
+            opacity: .8;
+            color: $fontColorMain;
+            margin-bottom: 10px;
+            width: 316px;
+            img {
+                margin-right: 10px;
+            }
+            span {
+                position: relative;
+                left: 33px;
+            }
+        }
+        &__listItem-noActive {
+            opacity: .2;
+        }
+        &__btnBox {
+            text-align: center;
+            padding-top: 30px;
+            padding-bottom: 30px;
+            color: $fontColorMain;
+            border: 1px solid rgba(255,255,255, .2);
+            h4 {
+                font-family: $FontText;
+                font-size: 36px;
+                line-height: 100%;
+                margin-bottom: 23px;
+            }
+            button {
+                width: 230px;
+                height: 60px;
+                border: none;
+                background: linear-gradient(128.38deg, rgba(255, 255, 255, 0.5) 0%, rgba(255, 255, 255, 0.1) 100%), #F2C94C;
+                color: #333333;
+                font-family: $FontText;
+                font-size: 15px;
+                font-weight: Bold;
+                line-height: 140%;
+                text-align: center;
+                letter-spacing: 1px;
+                text-transform: uppercase;
+                position: relative;
+                &::after {
+                    content: "";
+                    display: block;
+                    width: 190px;
+                    height: 15px;
+                    background: linear-gradient(128.14deg, rgba(255, 255, 255, 0.5) 0%, rgba(255, 255, 255, 0.1) 100%), #F2C94C;
+                    filter: blur(40px);
+                    border-radius: 40px;
+                    position: absolute;
+                    left: 20px;
+                    opacity: .5;
+                    top: 60px;
+                    overflow: hidden;
+                }
+            }
+        }
+    }
+}
