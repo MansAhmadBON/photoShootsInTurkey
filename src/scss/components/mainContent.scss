@@ -1,0 +1,37 @@
+@import "../base/vars";
+
+.mainContent {
+    max-width: 680px;
+    margin: 0 auto;
+    text-align: center;
+    &__title {
+        font-family: $FontTitles;
+        font-size: 90px;
+        color: $fontColorMain;
+        margin: 0;
+    }
+    &__text {
+        margin-top: 40px;
+        margin-bottom: 45px;
+        font-family: $FontText;
+        font-size: 26px;
+        color: $fontColorMain;
+        letter-spacing: -0.5px;
+        .logoInst {
+            position: relative;
+            top: 8px;
+        }
+    }
+    &__btn {
+        width: 337px;
+        height: 70px;
+        background-color: #fff;
+        border: none;
+        font-family: $FontText;
+        font-weight: 600;
+        font-size: 15px;
+        letter-spacing: 1px;
+        text-transform: uppercase;
+        color: #333333
+    }
+}
