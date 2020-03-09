@@ -1,0 +1,13 @@
+.headerNav {
+    &__navList {
+        display: flex;
+        justify-content: space-between;
+    }
+    &__link {
+        font-family: 'ProximaNova';
+        font-size: 15px;
+        color: #fff;
+        font-weight: 400;
+        cursor: pointer;
+    }
+}
