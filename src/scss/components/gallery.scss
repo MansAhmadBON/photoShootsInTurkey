@@ -1,0 +1,104 @@
+@import "../base/vars";
+
+.gallery {
+    padding-top: 80px;
+    .galleryHeader {
+        text-align: center;
+        &__subTitle {
+            font-family: $FontText;
+            font-size: 18px;
+            font-weight: $weightSemiBold;
+            letter-spacing: 10px;
+            text-transform: uppercase;
+            color: #F2C94C;
+            margin-bottom: 17px;
+        }
+        &__title {
+            Font-Family: $FontTitles;
+            font-weight: $weightExtraBold;
+            Font-size: 42px;
+            Vertical-Align: Top;
+        }
+    }
+}
+
+.galleryMain {
+    padding-top: 40px;
+    &__btns {
+        max-width: 884px;
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        margin: 0 auto;
+    }
+    &__btn {
+        padding: 20px 31px 19px 30px;
+        font-family: $FontText;
+        font-size: 15px;
+        font-weight: $weightBold;
+        color: #333333;
+        text-align: center;
+        letter-spacing: 1px;
+        text-transform: uppercase;
+        background-color: transparent;
+        border: 2px solid #E9E9E9;
+    }
+    &__btn-active {
+        position: relative;
+        background: linear-gradient(114.44deg, rgba(255, 255, 255, 0.5) 0%, rgba(255, 255, 255, 0.1) 100%), #F2C94C;
+        border: 0;
+        &::after {
+            content: "";
+            display: block;
+            width: 90px;
+            height: 50px;
+            background: linear-gradient(110.82deg, rgba(255, 255, 255, 0.5) 0%, rgba(255, 255, 255, 0.1) 100%), #F2C94C;
+            filter: blur(40px);
+            border-radius: 40px;
+            position: absolute;
+            left: 20px;
+        }
+    }
+}
+
+.galleryPhotos {
+    padding-top: 60px;
+    max-width: 1750px;
+    display: grid;
+    grid-template-areas: "galleryPhotos__photo-1 galleryPhotos__photo-2 galleryPhotos__photo-3 galleryPhotos__photo-6"
+                         "galleryPhotos__photo-4 galleryPhotos__photo-4 galleryPhotos__photo-3 galleryPhotos__photo-7"
+                         "galleryPhotos__photo-4 galleryPhotos__photo-4 galleryPhotos__photo-5 galleryPhotos__photo-8";
+    grid-gap: 20px;
+    overflow-x: scroll;
+    &::-webkit-scrollbar {
+        width: 10px;
+        margin-bottom: 10px;
+    }
+    &::-webkit-scrollbar-track {
+        background-color: #fff;
+    }
+    &::-webkit-scrollbar-thumb {
+        background-color: #F2C94C;
+    }
+    &__photo-1 {
+        margin-bottom: 20px;
+    }
+
+    &__photo-2 {
+        margin-bottom: 20px;
+    }
+
+    &__photo-3 {
+        margin-bottom: 20px;
+    }
+
+    &__photo-6 {
+        margin-bottom: 10px;
+    }
+
+    &__photo-7 {
+        position: relative;
+        top: 4px;
+    }
+
+}
