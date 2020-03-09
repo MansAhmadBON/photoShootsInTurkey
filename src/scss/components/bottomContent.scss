@@ -1,0 +1,104 @@
+@import "../base/vars";
+
+.bottomContent {
+    padding-top: 34px;
+    max-width: 1370px;
+    width: 100%;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    &__wrapperText {
+        display: flex;
+        justify-content: space-between;
+        max-width: 1300px;
+        width: 100%;
+        padding-bottom: 20px;
+    }
+    &__text {
+        font-family: $FontText;
+        font-size: 18px;
+        line-height: 100%;
+        color: #fff;
+        font-weight: 400;
+    }
+    &__text-1 {
+        text-transform: uppercase;
+        letter-spacing: 3px;
+    }
+    &__text-2 {
+        font-size: 18px;
+    }
+}
+
+.bottomContentItems {
+    position: relative;
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    background-image: url("../assets/img/bg/bg-bottom.png");
+    background-size: cover;
+    z-index: 999;
+    &::after {
+        content: '';
+        display: block;
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        height: 100%;
+        width: 100%;
+        background-image: url("../assets/img/bg/bg.png");
+    }
+    .wrapperItems {
+        max-width: 1179px;
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        margin-left: 50px;
+    }
+    &__item {
+        flex-basis: 33.3%;
+        padding-top: 45px;
+        padding-bottom: 45px;
+        position: relative;
+        z-index: 99;
+        position: relative;
+    }
+    &__item-2 {
+        &::after {
+            content: "";
+            display: block;
+            width: 100px;
+            height: 1px;
+            background-color: #fff;
+            transform: rotate(90deg) translateX(70%);
+            position: absolute;
+            right: 0;
+            top: 0;
+            opacity: .2;
+        }
+        &::before {
+            content: "";
+            display: block;
+            width: 100px;
+            height: 1px;
+            background-color: #fff;
+            transform: rotate(90deg) translateX(70%);
+            position: absolute;
+            left: -100px;
+            top: 0;
+            opacity: .2;
+        }
+    }
+    &__descrItem {
+        margin-left: 30px;
+        max-width: 270px;
+        font-family: $FontText;
+        font-size: 18px;
+        line-height: 140%;
+        display: inline-block;
+        color: $fontColorMain;
+        opacity: 0.8;
+    }
+}
