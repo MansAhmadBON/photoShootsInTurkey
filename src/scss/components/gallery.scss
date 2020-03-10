@@ -73,6 +73,7 @@
                          "galleryPhotos__photo-4 galleryPhotos__photo-4 galleryPhotos__photo-5 galleryPhotos__photo-8";
     grid-gap: 20px;
     overflow-x: scroll;
+    position: relative;
     &::-webkit-scrollbar {
         width: 10px;
         margin-bottom: 10px;
@@ -104,6 +105,19 @@
         top: 4px;
     }
 }
+
+
+.galleryPhotos__photo {
+    position: relative;
+    transition: $transition;
+    &:hover {
+        transform: scale(1.5, 1.5);
+        z-index: 999999;
+    }
+}
+
+
+
 
 .galleryPhotos-fam {
     flex-wrap: wrap;
