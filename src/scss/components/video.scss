@@ -1,0 +1,171 @@
+@import "../base/vars";
+
+.video {
+    height: 688px;
+    width: 100%;
+    position: relative;
+    background: #202020;
+    &__close {
+        width: 200px;
+        height: 50px;
+        border: 0;
+        background: linear-gradient(128.38deg, rgba(255, 255, 255, 0.5) 0%, rgba(255, 255, 255, 0.1) 100%), #F2C94C;
+        color: #333333;
+        font-family: $FontText;
+        font-size: 14px;
+        font-weight: Bold;
+        line-height: 140%;
+        text-align: center;
+        letter-spacing: 1px;
+        text-transform: uppercase;
+        outline: none;
+        margin: 20px auto;
+        &:hover {
+            background: linear-gradient(114.44deg, rgba(255, 255, 255, 0.5) 0%, rgba(255, 255, 255, 0.1) 100%), #F2C94C;
+            opacity: .8;
+        }
+        &:active {
+            background: linear-gradient(114.44deg, rgba(255, 255, 255, 0.5) 0%, rgba(255, 255, 255, 0.1) 100%), #F2C94C;
+            opacity: .8;
+            box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+        }
+    }
+}
+
+.videoPlayer {
+    max-height: 500px;
+    height: 100%;
+    max-width: 1000px;
+    width: 100%;
+    margin: 0 auto;
+    display: flex;
+}
+
+.wrapperVideo {
+    max-width: 1100px;
+    height: 688px;
+    display: none;
+    margin: 0 auto;
+}
+.wrapperVideo-active {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.videoPoster {
+    display: none;
+    justify-content: space-between;
+    height: 688px;
+    background-image: url("../assets/img/bg/bg-video.png");
+    background-size: cover;
+    position: relative;
+    &__persons {
+        max-width: 760px;
+        max-height: 688px;
+        position: relative;
+    }
+    &__person-women {
+        position: absolute;
+        bottom: 0;
+        left: 70px;
+    }
+    &__person-men {
+        position: relative;
+        top: 80px;
+        left: 210px;
+    }
+    &__btn {
+        position: relative;
+    }
+    &__btnIco {
+        position: absolute;
+        height: 170px;
+        width: 170px;
+        border-radius: 50%;
+        top: -215px;
+        left: 25px;
+        background: #fff url("../assets/img/svg/Polygon.svg") no-repeat center;
+        transition: $transition;
+        &:hover {
+            background-color: #202020;
+        }
+    }
+}
+
+.wrapperBtn {
+    position: absolute;
+    width: 220px;
+    height: 220px;
+    background: transparent;
+    z-index: 1000;
+    top: 35%;
+    left: 50%;
+    &__text {
+        animation-name: rotation;
+        animation-duration: 20s;
+        animation-iteration-count: infinite;
+        animation-timing-function: linear;
+    }
+}
+
+.videoDescr {
+    box-sizing: border-box;
+    flex-basis: 50%;
+    position: relative;
+    background-image: url("../assets/img/img/videobg.png");
+    background-size: cover;
+    padding: 80px;
+    &__subTitle {
+        font-family: $FontText;
+        font-weight: $weightBold;
+        font-size: 18px;
+        line-height: 100%;
+        letter-spacing: 10px;
+        text-transform: uppercase;
+        color: #F2C94C;
+        display: block;
+        margin-bottom: 27px;
+    }
+    &__title {
+        font-family: $FontTitles;
+        font-weight: $weightExtraBold;
+        font-size: 34px;
+        line-height: 120%;
+        color: #FFFFFF;
+        display: block;
+        margin-bottom: 40px;
+    }
+    &__text {
+        font-family: $FontText;
+        font-size: 18px;
+        line-height: 140%;
+        letter-spacing: -0.3px;
+        color: rgba(255, 255, 255, 0.8);
+    }
+    &__text-1 {
+        margin-bottom: 20px;
+    }
+    &__mask {
+        height: 100%;
+        width: 100%;
+        background-image: url("../assets/img/img/videonoize.png");
+        background-size: cover;
+    }
+}
+
+.videoPoster-active {
+    display: flex;
+}
+
+@keyframes rotation {
+    0% {
+        transform:rotate(0deg);
+    }
+    100% {
+        transform:rotate(360deg);
+    }
+}
+.gold {
+    color: #F2C94C;
+}
