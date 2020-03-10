@@ -1,13 +1,20 @@
+@import "../base/vars";
+
 .headerNav {
     &__navList {
         display: flex;
         justify-content: space-between;
     }
     &__link {
-        font-family: 'ProximaNova';
+        font-family: $FontText;
         font-size: 15px;
         color: #fff;
         font-weight: 400;
         cursor: pointer;
+        transition: $transition;
+        &:hover {
+            opacity: .8;
+            border-bottom: 2px solid #fff;
+        }
     }
 }
