@@ -29,6 +29,13 @@
         width: 100%;
         display: flex;
         justify-content: space-between;
+        @media (max-width: 1200px) {
+            flex-wrap: wrap;
+            justify-content: space-around;
+            .priceMain__column {
+                margin-top: 60px;
+            }
+        }
         &__column {
             max-width: 420px;
             width: 100%;
@@ -68,7 +75,7 @@
             opacity: .8;
             color: $fontColorMain;
             margin-bottom: 10px;
-            width: 316px;
+            max-width: 316px;
             img {
                 margin-right: 10px;
             }
