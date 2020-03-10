@@ -1,3 +1,4 @@
+//tabs
 window.onload = function () {
     const wrapBtnsPhotos = document.querySelector('.galleryMain__btns');
     const arrayBtnsPhotos = document.querySelectorAll('.galleryMain__btn');
@@ -62,3 +63,9 @@ window.onload = function () {
         }
     });
 };
+
+//параллакс
+$(window).scroll(function(){
+    let scrollTop = $(this).scrollTop();
+    $('.hero').css({ 'background-position-y': scrollTop / 2 + 'px'})
+});
